@@ -4,3 +4,5 @@ ansible slaves -i hosts -m ping
 
 
 https://docs.ansible.com/ansible/latest/collections/amazon/aws/aws_s3_module.html
+
+https://medium.com/appgambit/ansible-playbook-with-jenkins-pipeline-2846d4442a31
