@@ -1,0 +1,19 @@
+---
+- name: Installing httpd
+  hosts: slaves
+  become: true
+  tasks:
+    - name: Installing httpd
+      yum:
+        name: httpd
+        state: present
+    - name: Copying the file
+      copy:
+        src: /root/ansible-demo/httpd.conf
+        dest: /var/www/html/index.html
+        mode: 0644
+        backup: yes
+    - name: Starting the service
+      service:
+        name: httpd
+        state: started
