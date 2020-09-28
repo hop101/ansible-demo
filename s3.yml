@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks: 
+     - name: create a bucket
+       aws_s3:
+          ec2_region: us-east-1
+          bucket: "myneswbucketfordevopsclass"
+          mode: create

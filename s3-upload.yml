@@ -1,0 +1,18 @@
+---
+- 
+ name: uploading
+ hosts: localhost
+ gather_facts: no
+ tasks:
+    - name: Create a new S3 bucket
+      aws_s3:
+        ec2_region: "{{ AWS_REGION }}"
+        bucket: demo-bucket-devops
+        mode: create
+    - name: Add file to a bucket
+      aws_s3:
+        ec2_region: "{{ AWS_REGION }}"
+        bucket: demo-bucket-devops
+        mode: put
+        object: s3-upload.yml
+        src: /var/lib/jenkins/workspace/upload_files_to_s3_using_ansible/s3-upload.yml
