@@ -1,0 +1,8 @@
+---
+
+- hosts: slaves
+  tasks: 
+     - name: echo Welcome!
+       shell: 'echo "Welcome!"> /welcome.txt'
+
+ 
