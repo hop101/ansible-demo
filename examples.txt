@@ -1,3 +1,6 @@
 ansible all -i hosts  -a "free -m"
 
 ansible slaves -i hosts -m ping
+
+
+https://docs.ansible.com/ansible/latest/collections/amazon/aws/aws_s3_module.html
