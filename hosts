@@ -1,7 +1,5 @@
-
-
 [localhost]
-local ansible_connection=local
+local ansible_host=localhost ansible_connection=local
 
 [slaves]
 remote_node1 ansible_host=54.175.35.231 ansible_connection=ssh ansible_user=root
