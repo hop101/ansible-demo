@@ -1,0 +1,11 @@
+--- # COPY MODULE EXAMPLE
+- hosts: slaves
+  user: root
+  connection: ssh
+  gather_facts: no
+  tasks:
+  - name: Copy from the files directory test file
+    action: copy src=apache.yml dest=/home/apache.yml owner=root group=wheel mode=0655
+
+
+
